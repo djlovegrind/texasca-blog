@@ -1,0 +1,76 @@
+<%- partial('_partial/head') %>
+<body>
+
+  <!--  THE NAVBAR STARTS.... -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-bootstrap">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      
+          <a class="navbar-brand" href="http://www.texasca.com"><img id="navbar-logo-image" alt="Texas Custom Apparel logo" src="http://www.texasca.com/graphics/tiny-logo.png" ></a>
+        </div>
+    
+       <div class="navbar-collapse collapse navbar-TCA">  
+          <ul class="nav navbar-nav navbar-right" id="fix">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="http://www.texasca.com/team.html">MEET THE TEAM</a></li>
+            <li><a href="http://www.texasca.com/products.html">PRODUCTS</a></li>
+            <li class="active" ><a href="http://blog.texasca.coml">BLOG</a></li>
+            <li><a href="http://www.texasca.com/preorder.html">PREORDER</a></li>
+            <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=Z95ZWNBCKNAMS&display=1">VIEW CART</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>    
+    <!--   THE NAVBAR ENDS...  -->
+
+  <div id="container">
+    <div id="wrap">
+      <!-- Hide their header <%- partial('_partial/header', null, {cache: !config.relative_link}) %> -->
+
+      <div class="outer">
+        <section id="main"><%- body %></section>
+        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+        <% } %>
+      </div>
+      <!-- Hide their footer <%- partial('_partial/footer', null, {cache: !config.relative_link}) %> -->
+
+    <!-- THE FOOTER STARTS... -->
+    <div id="legal-wrapper">
+      <div class="container-bootstrap" id="legal">
+        <div class="row">
+          <div class="col-sm-7 col-md-8 col-xs-12">
+          <b class="subtitle-small">Texas Custom Apparel, LLC</b><br />
+          <!-- Button trigger modal -->
+            <ul>
+            <li><a data-toggle="modal" data-target="#myModal" class="footer-link">User Agreement &amp; Privacy Policy</a></li>
+            <li><a href="team.html" class="footer-link" ><span style="color: white;">Meet the Team</span></a></li>
+            <li><a href="contact.html" class="footer-link" ><span style="color: white;">Contact Us</span></a></li>
+            </ul>
+          </div>
+           <div class="clearfix visible-xs"></div>
+          <div class="col-sm-5 col-md-4 col-xs-12">
+            <a class="socialicon" href="https://www.facebook.com/TexasCA" target="_blank"><img alt="Facebook Icon" src="http://www.texasca.com/graphics/smaller-facebook-white.png" /></a>
+            <a class="socialicon" href="https://twitter.com/TexasCA_Austin" target="_blank" ><img alt="Twitter Icon" src="http://www.texasca.com/graphics/smaller-twitter-white.png" /></a>
+            <a class="socialicon" href="http://www.linkedin.com/company/3193205" target="_blank" ><img alt="LinkedIn Icon" src="http://www.texasca.com/graphics/smaller-linkedin-white.png" /></a>
+            <img class="socialicon" alt="Licensing Logo" src="http://www.texasca.com/graphics/licensed-logo-improved-again.png" />
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <!-- ...THE FOOTER ENDS -->
+
+
+    </div>
+    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/after-footer') %>
+  </div>
+</body>
+</html>
