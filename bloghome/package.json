@@ -7,4 +7,7 @@
     "hexo-renderer-stylus": "*",
     "hexo-renderer-marked": "*"
   }
+  , "engines": {
+  	"node": "0.10.33"
+  }
 }
